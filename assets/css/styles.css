@@ -1,0 +1,254 @@
+* {
+    box-sizing: border-box;
+}
+:root {
+    --primary-color: #171100;
+    --second-color: #ffb900;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 1.6rem;
+    font-family: "Poppins", sans-serif;
+}
+/* common */
+.btn {
+    display: inline-block;
+    min-width: 144px;
+    padding: 17px 16px;
+    border-radius: 24.5px;
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-align: center;
+}
+.btn:hover {
+    opacity: 0.8;
+}
+.circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    margin: 0 20px;
+    border: none;
+}
+a {
+    text-decoration: none;
+}
+
+.content {
+    width: 81.25%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* ========header======= */
+/* navigation */
+.header {
+    padding-top: 20px;
+    background: #fffcf4;
+    /* height: 900px; */
+}
+.nav-bar {
+    display: flex;
+    align-items: center;
+}
+.nav-bar ul {
+    display: flex;
+    margin-left: auto;
+    margin-right: 40px;
+}
+.nav-bar ul a {
+    display: inline-block;
+    padding: 5px 20px;
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #5f5b53;
+}
+.nav-bar ul a:hover {
+    text-decoration: underline;
+}
+.nav-bar ul li:first-child a {
+    font-weight: 600;
+    color: var(--primary-color);
+    position: relative;
+}
+.nav-bar ul li:first-child a::after {
+    content: " ";
+    display: inline-block;
+    width: 12px;
+    height: 3px;
+    background: var(--primary-color);
+    border-radius: 999px;
+    position: absolute;
+    bottom: 0;
+    left: 18px;
+}
+/* end navigation */
+/* hero */
+.hero {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    align-items: center;
+}
+.hero__infor {
+    padding: 30px 50px 30px 100px;
+    width: 52%;
+}
+.hero__infor .title {
+    font-size: 5.8rem;
+    font-weight: 700;
+    line-height: 68px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: var(--primary-color);
+}
+.hero__infor .desc {
+    width: 450px;
+    color: #5f5b53;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 30px;
+    margin-top: 20px;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+.hero__infor .cta {
+    align-items: center;
+    margin-top: 30px;
+    display: flex;
+}
+.hero__infor .btn-cta {
+    background-color: var(--second-color);
+    font-size: 1.8rem;
+    padding: 23px 16px;
+    min-width: 180px;
+    border-radius: 32px;
+}
+.hero__infor .cta-watch {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+.hero__infor .sub-desc {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-top: 30px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+.hero__infor .infor-courses {
+    display: inline-block;
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+.hero__infor .infor-courses strong {
+    font-size: 4.4rem;
+    font-weight: 700;
+}
+.hero__banner {
+    width: 48%;
+    position: relative;
+}
+.hero__banner .img {
+    width: 480px;
+    height: 685px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.circle img {
+    margin: auto;
+}
+.hero__sumary {
+    position: absolute;
+    right: 0;
+    bottom: 48px;
+    width: 270px;
+    border-radius: 12px;
+    opacity: 0px;
+    background: #fff;
+    padding: 20px 0;
+}
+.hero__sumary .detail-course {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.hero__sumary .detail-course:last-child {
+    margin-bottom: 0;
+}
+.hero__sumary .bg-yellow {
+    background: #fff9e8;
+    width: 48px;
+    height: 48px;
+}
+.hero__banner .list-course {
+    color: #5f5b53;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: left;
+}
+.hero__banner .colum .title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+/* end hero */
+/* end header */
+/* =============section-1============== */
+.section-1 {
+    background-color: #fff;
+}
+.section-1 .padding-200 {
+    padding: 200px 0;
+}
+.section-1 .heading {
+    display: flex;
+    align-items: center;
+}
+.section-1 .heading .button {
+    display: flex;
+    margin-left: auto;
+}
+.section-1 .heading .infor{
+    width: 45%;
+}
+.section-1 .heading .title {
+    color: var(--primary-color);
+    font-size: 3.8rem;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: -0.02em;
+}
+.section-1 .heading .desc{
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 30px;
+    margin-top: 20px;
+}
+.circle.previous{
+    border: 1px solid var(--second-color);
+}
+.circle.next{
+    background-color: var(--second-color);
+    margin-left: 0;
+}
+.circle.previous:hover{
+    background-color: #171100;
+}
