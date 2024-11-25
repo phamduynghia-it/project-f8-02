@@ -12,6 +12,20 @@ body {
     font-size: 1.6rem;
     font-family: "Poppins", sans-serif;
 }
+.line-clamp{
+    display: -webkit-box;           /* Sử dụng layout dạng box */
+    -webkit-box-orient: vertical;  /* Định hướng theo chiều dọc */
+    -webkit-line-clamp: var(--lineclamp,1);         /* Phiên bản WebKit */
+    line-clamp: 1;                 /* Phiên bản chuẩn hiện đại */
+    overflow: hidden;              /* Ẩn nội dung vượt quá */
+    text-overflow: ellipsis;       /* Thêm dấu ba chấm */
+  }   
+.line-clamp.line-2{
+    --lineclamp:2
+}
+.break-all{
+    word-break: break-all;
+}
 /* common */
 .btn {
     display: inline-block;
@@ -43,9 +57,12 @@ a {
 
 .content {
     width: 81.25%;
-    max-width: 100%;
+    max-width: calc(100% - 48px);
     margin-left: auto;
     margin-right: auto;
+}
+.padding-200 {
+    padding: 200px 0;
 }
 /* ========header======= */
 /* navigation */
@@ -215,9 +232,6 @@ a {
 .section-1 {
     background-color: #fff;
 }
-.section-1 .padding-200 {
-    padding: 200px 0;
-}
 .section-1 .heading {
     display: flex;
     align-items: center;
@@ -271,10 +285,11 @@ a {
     display: flex;
     align-items: center;
 }
-.main-section1 .box__title h3 {
+.main-section1 .box__title h3 a {
     font-size: 1.8rem;
     font-weight: 600;
     color: var(--primary-color);
+    cursor: pointer;
 }
 .main-section1 .box__desc {
     font-size: 1.4rem;
@@ -316,7 +331,7 @@ a {
 }
 /* ============= end section-1============== */
 /* feed-back */
-.inner-content{
+.inner-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -327,11 +342,11 @@ a {
 }
 .feed-back .circle {
     margin: 0;
-    width: 5px;
-    height: 5px;
+    width: 6px;
+    height: 6px;
     background-color: #634700;
 }
-.feed-back .circle:active{
+.feed-back .circle:active {
     background-color: var(--second-color);
 }
 .feed-back .control {
@@ -360,11 +375,11 @@ a {
     line-height: 26px;
     color: #bfbcb2;
 }
-.content-feedback{
+.content-feedback {
     width: 60%;
     position: relative;
 }
-.content-feedback::before{
+.content-feedback::before {
     content: url(../img/daunhay.png);
     position: absolute;
     left: -25px;
@@ -379,3 +394,51 @@ a {
     color: #fff;
 }
 /* end feed back */
+/* section 2 */
+/* .section-2{
+    height: 100vh;
+} */
+.inner-content-st2 {
+    display: flex;
+    justify-content: space-between;
+}
+.section-2__right {
+    width: 41%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+.section-2__left {
+    gap: 30px;
+    display: flex;
+}
+.lower{
+    margin-top: 34px;
+}
+.section-2-img {
+    width: 270px;
+    height: 404px;
+    border-radius: 16px;
+    opacity: 0px;
+    object-fit: cover;
+}
+.section-2__title {
+    font-size: 3.8rem;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: -0.02em;
+}
+.section-2__desc {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 28px;
+    color: #5F5B53;
+    margin-top: 10px;
+}
+.btn-section2{
+    min-width: 137px;
+    background:var(--second-color);
+    margin-top: 20px;
+}
+/* end section 2 */
