@@ -148,8 +148,6 @@ a {
     font-weight: 400;
     margin-top: 30px;
     text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
 }
 .hero__infor .infor-courses {
     display: inline-block;
@@ -316,3 +314,68 @@ a {
     font-size: 1.8rem;
     font-weight: 600;
 }
+/* ============= end section-1============== */
+/* feed-back */
+.inner-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.feed-back {
+    background-color: #2e2100;
+    padding: 50px 0;
+}
+.feed-back .circle {
+    margin: 0;
+    width: 5px;
+    height: 5px;
+    background-color: #634700;
+}
+.feed-back .circle:active{
+    background-color: var(--second-color);
+}
+.feed-back .control {
+    display: flex;
+    margin-top: 15px;
+    justify-content: flex-start;
+    gap: 7px;
+}
+.person-img {
+    border-radius: 50%;
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+}
+.feed-back__name {
+    margin-top: 10px;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 34px;
+    color: #f7f7f7;
+}
+.feed-back__desc {
+    margin-top: 5px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 26px;
+    color: #bfbcb2;
+}
+.content-feedback{
+    width: 60%;
+    position: relative;
+}
+.content-feedback::before{
+    content: url(../img/daunhay.png);
+    position: absolute;
+    left: -25px;
+    top: -20px;
+}
+.inner-content-feedback {
+    font-size: 26px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 40px;
+    text-align: left;
+    color: #fff;
+}
+/* end feed back */
