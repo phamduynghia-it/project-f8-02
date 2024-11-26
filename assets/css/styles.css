@@ -12,18 +12,18 @@ body {
     font-size: 1.6rem;
     font-family: "Poppins", sans-serif;
 }
-.line-clamp{
-    display: -webkit-box;           /* Sử dụng layout dạng box */
-    -webkit-box-orient: vertical;  /* Định hướng theo chiều dọc */
-    -webkit-line-clamp: var(--lineclamp,1);         /* Phiên bản WebKit */
-    line-clamp: 1;                 /* Phiên bản chuẩn hiện đại */
-    overflow: hidden;              /* Ẩn nội dung vượt quá */
-    text-overflow: ellipsis;       /* Thêm dấu ba chấm */
-  }   
-.line-clamp.line-2{
-    --lineclamp:2
+.line-clamp {
+    display: -webkit-box; /* Sử dụng layout dạng box */
+    -webkit-box-orient: vertical; /* Định hướng theo chiều dọc */
+    -webkit-line-clamp: var(--lineclamp, 1); /* Phiên bản WebKit */
+    line-clamp: 1; /* Phiên bản chuẩn hiện đại */
+    overflow: hidden; /* Ẩn nội dung vượt quá */
+    text-overflow: ellipsis; /* Thêm dấu ba chấm */
 }
-.break-all{
+.line-clamp.line-2 {
+    --lineclamp: 2;
+}
+.break-all {
     word-break: break-all;
 }
 /* common */
@@ -60,6 +60,19 @@ a {
     max-width: calc(100% - 48px);
     margin-left: auto;
     margin-right: auto;
+}
+.desc {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 28px;
+    color: #5f5b53;
+    margin-top: 10px;
+}
+.heading {
+    font-size: 3.8rem;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: -0.02em;
 }
 .padding-200 {
     padding: 200px 0;
@@ -243,13 +256,6 @@ a {
 .section-1 .heading .infor {
     width: 45%;
 }
-.section-1 .heading .title {
-    color: var(--primary-color);
-    font-size: 3.8rem;
-    font-weight: 700;
-    line-height: 48px;
-    letter-spacing: -0.02em;
-}
 .section-1 .heading .desc {
     font-size: 1.8rem;
     font-weight: 400;
@@ -395,10 +401,9 @@ a {
 }
 /* end feed back */
 /* section 2 */
-/* .section-2{
-    height: 100vh;
-} */
-.inner-content-st2 {
+
+/* features-01 */
+.features {
     display: flex;
     justify-content: space-between;
 }
@@ -413,7 +418,7 @@ a {
     gap: 30px;
     display: flex;
 }
-.lower{
+.lower {
     margin-top: 34px;
 }
 .section-2-img {
@@ -423,22 +428,115 @@ a {
     opacity: 0px;
     object-fit: cover;
 }
-.section-2__title {
-    font-size: 3.8rem;
-    font-weight: 700;
-    line-height: 48px;
-    letter-spacing: -0.02em;
-}
-.section-2__desc {
-    font-size: 1.6rem;
-    font-weight: 400;
-    line-height: 28px;
-    color: #5F5B53;
-    margin-top: 10px;
-}
-.btn-section2{
+.btn-section2 {
     min-width: 137px;
-    background:var(--second-color);
+    background: var(--second-color);
     margin-top: 20px;
 }
+/* end feature-01 */
+
+/* features-02 */
+.features-02 {
+    padding-top: 130px;
+    display: flex;
+    align-items: center;
+}
+.features2__content {
+    width: 48%;
+}
+.features__img {
+    width: 40%;
+    border-radius: 20px;
+    height: 440px;
+    object-fit: cover;
+}
+/* features-02 */
 /* end section 2 */
+/* =========== Blog =========== */
+.blog {
+    background: #fffcf4;
+    padding: 96px 0;
+}
+.inner-blog {
+    text-align: center;
+}
+.inner-blog .desc {
+    width: 38%;
+    margin: 0 auto;
+}
+.blog-box {
+    background-color: #fff;
+    width: 33.3%;
+    border-radius: 16px;
+}
+.blog-box:hover {
+    box-shadow: 0px 16px 32px 0px #0000000d;
+}
+.blog-box .blog-img {
+    width: 100%;
+    height: 250px;
+    border-radius: 16px 16px 0px 0px;
+    object-fit: cover;
+}
+.main-blog {
+    margin-top: 55px;
+    display: flex;
+    gap: 30px;
+}
+.blog .question {
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 28px;
+    margin-top: 10px;
+}
+.blog__infor {
+    padding: 20px 20px 28px 20px;
+}
+.blog .btn {
+    margin-top: 24px;
+}
+.blog .btn:hover {
+    background-color: var(--second-color);
+}
+.blog p.desc {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+}
+.blog .main-blog p.desc::before {
+    display: inline-block;
+    content: "";
+    width: 6px;
+    height: 6px;
+    background-color: var(--second-color);
+    border-radius: 50%;
+    margin-right: 4px;
+}
+.blog .main-blog p.desc::after {
+    display: inline-block;
+    content: "";
+    right: -27px;
+    height: 1px;
+    border-radius: 0.5px 0px 0px 0px;
+    background-color: #e2dfda;
+    position: absolute;
+    left: 0;
+    top: 30px;
+}
+.blog .dots{
+    margin-top: 38px;
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+}
+.blog .dot{
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: #5F5B53;
+    border-radius: 50%;
+}
+.blog .dot.active{
+    background-color:#FFB900 ;
+}
+/* ===========END Blog =========== */
